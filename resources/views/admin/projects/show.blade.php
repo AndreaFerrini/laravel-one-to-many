@@ -15,4 +15,9 @@
     </p>
 
 
+    <div> Name: {{ $project->type->name }}</div>
+    <div> Slug: {{ $project->type->slug }}</div>
+
+
+
 @endsection

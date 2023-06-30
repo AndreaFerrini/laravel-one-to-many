@@ -2,6 +2,7 @@
 
 namespace App\Models\Admin;
 
+use App\Models\Admin\Type;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -17,5 +18,10 @@ class Project extends Model
     }
 
 
-    protected $fillable = ["title", "content", "slug", "cover_image"];
+    protected $fillable = ["title", "content", "slug", "cover_image", "type_id"];
+
+    public function type()
+    {
+        return $this->belongsTo(Type::class);
+    }
 }
